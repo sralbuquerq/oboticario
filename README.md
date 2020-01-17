@@ -6,7 +6,7 @@ Olá, eu me chamo Rafael, e eu desenvolvi uma aplicação em Angular para o Test
 
 ### NgRx
 
-Foi utilizado o ngrx.io para o desenvolvimento desta aplicação, ou mais conhecido como Redux, para utilizá-lo melhor em desenvolvimento, recomendo utilizar o Redux Devtools em seu navegador de preferência.
+Foi utilizado o [ngrx.io](ngrx.io) para o desenvolvimento desta aplicação, ou mais conhecido como Redux, para utilizá-lo melhor em desenvolvimento, recomendo utilizar o Redux Devtools em seu navegador de preferência.
 
 # Default Readme :c
 
