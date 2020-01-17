@@ -1,5 +1,15 @@
 # Boticario
 
+Olá, eu me chamo Rafael, e eu desenvolvi uma aplicação em Angular para o Teste do Boticario, espero que goste, gostaria de ter feito mais coisas, mas acredito que com tudo que eu fiz dá para mostrar um pouco de cada coisa que eu aprendi com a minha experiência.
+
+## Algumas especificações técnicas
+
+### NgRx
+
+Foi utilizado o ngrx.io para o desenvolvimento desta aplicação, ou mais conhecido como Redux, para utilizá-lo melhor em desenvolvimento, recomendo utilizar o Redux Devtools em seu navegador de preferência.
+
+# Default Readme :c
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
 ## Development server
@@ -25,6 +35,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-# oboticario
-Teste feito para Boticario, simulando um Portal de Acesso a Revendedores
