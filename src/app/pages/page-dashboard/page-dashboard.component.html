@@ -1,0 +1,76 @@
+<div #dashboardContainer class="container" *ngIf="{ productList: productList$ | async, credit: credit$ | async } as dash">
+  <div class="row">
+    <div id="logout" class="col col-lg-3 order-3 order-lg-none">
+      <div class="button" (click)="logout()">
+        <i class="fas fa-power-off"></i> Desconectar
+      </div>
+    </div>
+    <div id="logo" class="col col-md-6 col-sm-12 order-2 order-lg-none">
+      <div class="image">
+        <img src="./../../../assets/logo.svg">
+      </div>
+      <div class="desc">
+        portal revendedor
+      </div>
+    </div>
+    <div id="cashback" class="col col-lg-3 order-1 order-lg-none">
+      <div class="content">
+        <div class="desc">
+          Você acumulou até agora
+        </div>
+        <div class="values">
+          <div class="sign">R$</div>
+          <div class="price">{{ formatCredit(dash.credit) }}</div>
+        </div>
+        <div class="title">de <span>Cashback</span></div>
+      </div>
+    </div>
+  </div>
+  <div id="filter" class="row">
+    <div class="col">
+      <div class="buttons">
+        <div class="button button-filter">
+          <i class="fas fa-sliders-h fa-rotate-90"></i>
+        </div>
+        <div *ngFor="let cat of categories" class="button">
+          {{ cat }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="products" class="row">
+    <div *ngFor="let product of dash.productList" class="col col-xl-3 col-md-4 col-sm-6">
+      <div class="content">
+        <div class="box">
+          <div class="cart">
+            <div class="button">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div *ngIf="product.cashback" class="cashback">
+            <div class="numbers">
+              <div class="qty">{{ product.cashback }}</div>
+              <div class="percent">%</div>
+            </div>
+            <div class="phrase1">CASH</div>
+            <div class="phrase2">BACK</div>
+          </div>
+          <div class="image">
+            <div class="middle">
+              <img src="{{ product.src }}" alt="">
+            </div>
+          </div>
+          <div class="cod">{{ product.cod }}</div>
+        </div>
+        <div class="info">
+          <div class="title">{{ product.title }}</div>
+          <div class="desc">{{ product.desc }}</div>
+          <div class="price">
+            <div class="sign">R$</div>
+            <div class="value">{{ product.price }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import ./assets/fonts/sf-pro-display/style.css
+
+// Variables
+@import ./assets/variables
+
+html, body
+  min-height: 100%
+  padding: 0
+  margin: 0
+
+*, ::after, ::before
+  box-sizing: border-box
+
+.container
+  width: 100%
+  padding-right: $gutter
+  padding-left: $gutter
+  margin-right: auto
+  margin-left: auto
+  @media (min-width: 576px)
+    max-width: 540px
+  @media (min-width: 768px)
+    max-width: 720px
+  @media (min-width: 992px)
+    max-width: 960px
+  @media (min-width: 1200px)
+    max-width: 1140px
+
+
+.row
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin-left: -$gutter
+  margin-right: -$gutter
+  justify-content: center
+
+.col
+  // flex: 1
+  width: 100%
+  max-width: 100%
+  padding-left: $gutter
+  padding-right: $gutter
+
+.col-10
+  flex: 0 0 83.333333%
+  max-width: 83.333333%
+
+.col-sm-6
+  @media (min-width: 576px)
+    flex: 0 0 50%
+    max-width: 50%
+
+.col-sm-8
+  @media (min-width: 576px)
+    flex: 0 0 66.666667%
+    max-width: 66.666667%
+
+.col-md-3
+  @media (min-width: 768px)
+    flex: 0 0 25%
+    max-width: 25%
+
+.col-md-6
+  @media (min-width: 768px)
+    flex: 0 0 50%
+    max-width: 50%
+
+.col-md-4
+  @media (min-width: 768px)
+    flex: 0 0 33.333333%
+    max-width: 33.333333%
+
+.col-lg-3
+  @media (min-width: 992px)
+    flex: 0 0 25%
+    max-width: 25%
+
+.col-lg-4
+  @media (min-width: 992px)
+    flex: 0 0 33.333333%
+    max-width: 33.333333%
+
+.col-lg-5
+  @media (min-width: 992px)
+    flex: 0 0 41.666666%
+    max-width: 41.666666%
+
+.col-xl-3
+  @media (min-width: 1200px)
+    flex: 0 0 25%
+    max-width: 25%
+
+.col-xl-4
+  @media (min-width: 1200px)
+    flex: 0 0 33.333333%
+    max-width: 33.333333%
+
+.order-1
+  order: 1
+.order-2
+  order: 2
+.order-3
+  order: 3
+.order-lg-none
+  @media (min-width: 992px)
+    order: unset
+
+.center
+  align-self: center

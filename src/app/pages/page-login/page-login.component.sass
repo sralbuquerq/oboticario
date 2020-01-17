@@ -1,0 +1,169 @@
+@import ./../../../assets/fonts/sf-pro-display/style.css
+@import ./../../../assets/variables
+
+:host
+  > .container
+    font-family: 'SF Pro Display', sans-serif
+    color: #b1b1b1
+    height: 100%
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &.hide
+      overflow: hidden
+      #login
+        animation: 1.6s hideLogin .1s ease-out 1
+        animation-fill-mode: forwards
+      #logo, #login .content
+        animation: .2s hideLoginContent 0s linear 1
+        animation-fill-mode: forwards
+
+#logo
+  text-align: center
+  padding-bottom: $gutter*2
+  .image
+    img
+      height: 35px
+  .desc
+    color: rgba(#fff, 0.8)
+    font-weight: 200
+    font-size: 18px
+    &::before
+      background: rgba(#fff, 0.3)
+      content: ''
+      display: block
+      width: 100px
+      height: 1px
+      margin: 7px auto 4px
+
+#login
+  background: #fff
+  box-shadow: 0px 0px 150px 0px rgba(202, 140, 128, 0.5)
+  border-radius: 40px
+  height: 530px
+  > .content
+    padding: $gutter*4 $gutter*2
+  .header
+    text-align: center
+    .title
+      font-size: 32px
+      font-weight: 800
+      color: #212121
+      line-height: 1.6
+    .subtitle
+      font-weight: 300
+      line-height: 1.5
+  .forms
+    padding-top: $gutter*2
+    .form-group
+      .forgot-password
+        float: right
+        padding-right: 20px
+        a
+          color: #ffa099
+          font-size: 13px
+          font-weight: 200
+          text-decoration: none
+          line-height: 2
+
+      .form-label
+        font-size: 18px
+        color: #212121
+        font-weight: 700
+        line-height: 1.4
+        padding-left: 20px
+
+      .form-control
+        font-family: 'SF Pro Display', sans-serif
+        background-color: #fff2f1
+        box-shadow: 0px 0px 40px 0px rgba(#ca8c80, 0.08)
+        width: 100%
+        height: 50px
+        border-radius: 50px
+        border: none
+        outline: none
+        padding: $gutter $gutter*1.5
+        color: #ed6156
+        font-weight: 500
+        font-size: 16px
+        margin: 10px 0
+
+        &::-webkit-input-placeholder
+          color: #ccc0bf
+          font-size: 14px
+          font-weight: 400
+        &::-moz-placeholder
+          color: #ccc0bf
+          font-size: 14px
+          font-weight: 400
+        &:-ms-input-placeholder
+          color: #ccc0bf
+          font-size: 14px
+          font-weight: 400
+        &:-moz-placeholder
+          color: #ccc0bf
+          font-size: 14px
+          font-weight: 400
+        &::placeholder
+          color: #ccc0bf
+          font-size: 14px
+          font-weight: 400
+
+      .form-submit
+        font-family: 'SF Pro Display', sans-serif
+        margin-top: 20px
+        width: 100%
+        height: 50px
+        background-color: #ed6156
+        color: #fff
+        border-radius: 50px
+        border: none
+        outline: none
+        font-size: 18px
+        font-weight: 600
+        cursor: pointer
+        transition: all 0.4s
+
+        &:hover
+          background-color: darken(#ed6156, 7%)
+
+      .info-text
+        padding-top: $gutter
+        text-align: center
+        a
+          text-decoration: none
+          color: #b1b1b1
+          font-size: 14px
+          font-weight: 300
+
+
+@keyframes hideLogin
+  // 0%
+  // 60%
+  //   height: 50px
+  //   width: 50px
+  //   flex: 0 0 50px
+  // 100%
+  //   height: 0px
+  //   width: 0px
+  //   flex: 0 0 0
+  // 0%
+  40%
+    transform: translateY(90px)
+  // 60%
+  //   height: 50px
+  //   width: 50px
+  //   flex: 0 0 50px
+  90%
+    opacity: 1
+  100%
+    transform: translateY(100vh)
+    opacity: 0.6
+
+@keyframes hideLoginContent
+  0%
+    opacity: 1
+  100%
+    opacity: 0

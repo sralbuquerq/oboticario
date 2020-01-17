@@ -1,0 +1,43 @@
+<div #loginContainer class="container">
+  <div class="row">
+    <div id="logo" class="col col-lg-4 col-md-6 col-sm-8">
+      <div class="image">
+        <img src="./../../../assets/logo.svg">
+      </div>
+      <div class="desc">
+        acesso ao portal revendedor
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="login" class="col col-xl-4 col-lg-5 col-md-6 col-sm-8 col-10 center">
+      <div class="content">
+        <div class="header">
+          <div class="title">Login</div>
+          <div class="subtitle">Por favor, insira seu nome de Usuário e Senha</div>
+        </div>
+        <div class="forms">
+          <form [formGroup]="loginForm" (submit)="onSubmit()">
+            <div class="form-group">
+              <label for="username" class="form-label">CPF</label>
+              <input id="username" type="text" class="form-control" placeholder="Insira seu CPF" tabindex="1" formControlName="username">
+            </div>
+            <div class="form-group">
+              <label for="password" class="form-label">Senha</label>
+              <span class="forgot-password"><a href="#">Esqueceu sua senha?</a></span>
+              <input id="password" type="password" class="form-control" placeholder="Insira sua senha" tabindex="2" formControlName="password">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-submit" tabindex="3" [disabled]="!isValid()">Entrar</button>
+              <div class="info-text">
+                <a href="#">
+                  Não tem cadastro? Cadastre-se
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

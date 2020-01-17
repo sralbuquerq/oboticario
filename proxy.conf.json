@@ -1,0 +1,10 @@
+{
+  "/credit": {
+    "target": "https://mdaqk8ek5j.execute-api.us-east-1.amazonaws.com/",
+    "secure": true,
+    "pathRewrite": {
+    "^/credit": ""
+  },
+    "changeOrigin": true
+  }
+}
